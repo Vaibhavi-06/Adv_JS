@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //old style
+        function Welcome(){
+            document.write("Its anand <br>");
+        }
+        Welcome();
+        //using arrow function
+
+        const Welcome2 = () => document.write("Its Adityya <br>");
+
+        Welcome2();
+    </script>
+
+    <script>
+        //using function with parameter
+        let Welcome3 = function(name){
+            return `Hello its ${name}`;
+        }
+        document.write(Welcome3("Kaustubh") + "<br>");
+
+        //arrow  function
+        let Welcome4 = (name,age) => `Hello its ${name} and my age is ${age}`;
+        document.write(Welcome4("Vaibhavi",22) + "<br>");
+        console.log(typeof Welcome4);
+    </script>
+
+  
+    <script> 
+    //old way
+   
+
+      //using arrow function
+        const Addition = (num1,num2) => num1 + num2;
+         console.log(Addition(120,130));
+    </script>
+</body>
+</html>
