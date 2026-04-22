@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Example of Var
+        //var can be redeclared or update /assigned
+        var fname ="Harshada"; //gobal shope
+        var fname = "Anand";  //re-declared
+        
+
+        console.log(fname);
+        document.write(fname);
+
+
+        //Example of Let
+        //can not be redeclare  but can be update/assigned 
+        let l_name = "Shelke";
+         l_name
+        l_name="ogale";
+        document.write(l_name); 
+
+
+        //Example of const 
+        //can not we redeclare or update/assigned
+        const c_name ="TCS";
+        // const c_name ="FCT"; can not be redeclared
+        // c_name="FCT"; can not be update error type:-type error
+        document.write(c_name);
+
+
+        if(10==10)
+    {
+        var x="Hello";
+        let y= "How are u?";
+        const z="I am Fine"
+        console.log(y); // block scope or functional scope
+        console.log(z); // block scope or function scope
+    }
+       console.log(x); // global scope.
+
+    </script>
+</body>
+</html>
