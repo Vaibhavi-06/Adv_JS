@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
+    <!-- <script>
         function sumRest(name,...args){ ///rest operator while declaring function
             document.write(`Hello my name is ${name} : `);
 
@@ -19,6 +19,53 @@
         }
         var arr = [20,40,50];
         sumRest("Anand",...arr); //spread operator while function call
-    </script>
+    </script> -->
+    
+    <!-- <script>
+        var arr1 =[10,20,30,40];
+        console.log(arr1);//10,20,30,40
+        console.log(...arr1);// 10 20 30 40
+        console.log([...arr1]); //10,20,30,40
+   </script> -->
+
+   <!-- <script>
+        var arr1 = [10,20,30];
+        var arr2 = [40,50,60,70];
+
+        //var arr3 = arr1.concat(arr2);
+        //var arr3 = [...arr1,...arr2];
+
+        var arr3 = [5,...arr1,...arr2,75];
+
+        console.log(arr3);
+   </script> -->
+   
+   <script>
+        var obj1 = {
+            name: "Anand",
+            education: "BE IT",
+            city: "Pune",
+        }
+
+        var obj2 = {
+            age: 32,
+            phone: 8411079879
+        }
+
+        var obj3 = {...obj1,...obj2};
+
+        console.log(obj3);
+        //document.write(obj3);
+
+        document.write(JSON.stringify(obj3));
+        //JSON.stringify(value,replacer,space)
+        document.write(`<pre>${JSON.stringify(obj3,null,4)}</pre>`);
+
+        document.write(`<pre>${JSON.stringify(obj3,["name","age","city"],8)}</pre>`);
+
+
+   </script>
+
+
 </body>
 </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //assigning object attributes to variables
+        const person = {
+            name: "Vaibhavi",
+            age: 21,
+            gender: "female"
+        }
+        //document.write(`My name is - ${person.name}, my age ${person.age}, Gender : ${person.gender}`);
+
+        //let name = person.name;
+        //let age = person.age;
+        //let gender = person.gender;
+
+        //document.write(`My name is - ${name}, my age ${age}, Gender : ${gender}`);
+    </script>
+
+   <script>
+        const person1 = {
+            name1: "Akansha",
+            age1: 22,
+            gender1: "female"
+        }
+        let {name1,gender1,age1} = person1;
+        document.write(`My name is - ${name1}, my age ${age1}, Gender : ${gender1}`);
+    </script> 
+
+    <script>
+        const student = {
+            uname : "Harsh",
+            marks : 
+            {
+                maths : 90,
+                science : 56
+            }
+        }
+        const {uname,marks:{maths,science}} = student;
+        document.write(`My name is ${uname} , Science Marks ${science}`);
+    </script>
+
+    <script>
+        const arrValue = ['one','two','three'];
+
+        const [x,y,z] = arrValue;
+
+        console.log(x); //one
+    </script>
+
+    <script>
+        function showInfo({name,age,city}){
+            document.write(`Name : ${name}, Age : ${age}, City : ${city}`);
+        }
+        const person2 = {
+            name :"Chinmay",
+            age :21,
+            city :"Nashik"
+        }
+        showInfo(person2);
+    </script>
+
+</body>
+</html>
