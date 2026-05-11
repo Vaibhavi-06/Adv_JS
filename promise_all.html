@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise((resolve) => {
+            setTimeout(()=> resolve("Apple is ready"),1000);
+        });
+        let p2 = new Promise((resolve,reject) => {
+            setTimeout(()=> reject("Banana is ready"),2000);
+        });
+        let p3 = new Promise((resolve) => {
+            setTimeout(()=> resolve("Grapes is ready"),3000);
+        });
+
+        Promise.all([p1,p2,p3])
+        .then(results => { 
+            document.write("<h3>All fruits are Ready</h3>");
+        results.forEach(item => document.write(item + "<br>"))
+    })
+        
+        .catch(error => { 
+            document.write("<h3>One or more product missing</h3>");
+        document.write(error + "<br>")
+        })
+        .finally(()=>{
+            document.write("Fruit Packed Completed")
+        });
+    </script>
+</body>
+</html>

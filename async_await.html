@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        async function hello() {
+            return "hii";
+        }
+        console.log(hello());
+    </script> -->
+
+    <h2>Async Await Example - All Resolved task Success</h2>
+    <pre id = "output"></pre>
+
+    <script>
+        const output = document.getElementById("output");
+
+        function log(msg){
+            output.textContent += msg + "\n";
+        }
+
+        function boilWater(){
+            return new Promise((resolve) => {
+                setTimeout(()=> resolve("Water boiled"),3000)
+            });
+        }
+
+        function makeTea(){
+            return new Promise((resolve) => {
+                setTimeout(()=> resolve("Tea is ready"),2000)
+            });
+        }
+
+        function toastBread(){
+            return new Promise((resolve) => {
+                setTimeout(()=> resolve("Bread Toastaed"),1500)
+            });
+        }
+
+        async function makeBreakfast() {
+            try{
+                log("Starting breakfast prepration...");
+
+                const step1 = await boilWater();
+                log(step1);
+                const step2 = await makeTea();
+                log(step2);
+                const step3 = await toastBread();
+                log(step3);
+
+                log("All breakfast items are ready");
+
+            }
+            catch(error){
+                log("Error Occured" + error);
+            }
+            finally{
+                log("Breakfast preparation Completed");
+            }
+        }
+        log("Kitchen is opened");
+        makeBreakfast();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Ajax Example using fetch()</h2>
+    <button onclick="loadText()">Load Text file</button>
+
+    <pre id="output">Click to load text file button...</pre>
+
+    <script>
+        function loadText(){
+            fetch("file.txt")
+                .then(response => {
+                    document.write("Http status Code :" + response.status + "<br>");
+                    if(!response.ok){
+                        throw new Error("File not found or error loading file");
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.write("<b>File Content</b>");
+                    document.write(data);
+                })
+                .catch(error=>{
+                    document.write("Error :" + error.message);
+                });
+        }
+    </script>
+</body>
+</html>
